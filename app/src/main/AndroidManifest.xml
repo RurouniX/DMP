@@ -24,8 +24,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.PaymmentActivity"
-            android:label="@string/title_activity_paymment"
+            android:name=".ui.PaymentActivity"
+            android:label="@string/title_activity_payment"
             android:parentActivityName=".ui.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

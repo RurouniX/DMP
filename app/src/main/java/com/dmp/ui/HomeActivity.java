@@ -59,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
                     Snackbar.make(view, R.string.home_buy_msg_error, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 } else {
-                    Intent intent = new Intent(mContext, PaymmentActivity.class);
+                    Intent intent = new Intent(mContext, PaymentActivity.class);
                     intent.putExtra(Util.PARAM_PRODUCTS, (Serializable) mListProduct);
                     startActivity(intent);
                 }

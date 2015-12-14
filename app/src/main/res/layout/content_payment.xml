@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dmp.ui.PaymmentActivity"
-    tools:showIn="@layout/activity_paymment">
+    tools:context="com.dmp.ui.PaymentActivity"
+    tools:showIn="@layout/activity_payment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,13 +24,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/paymment_total_products" />
+                android:text="@string/payment_total_products" />
 
             <TextView
-                android:id="@+id/paymment_total_qtd"
+                android:id="@+id/payment_total_qtd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@string/paymment_total_qtd_mock" />
+                tools:text="@string/payment_total_qtd_mock" />
         </LinearLayout>
 
         <LinearLayout
@@ -41,26 +41,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/paymment_total_price" />
+                android:text="@string/payment_total_price" />
 
             <TextView
-                android:id="@+id/paymment_total_price"
+                android:id="@+id/payment_total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@string/paymment_total_price_mock" />
+                tools:text="@string/payment_total_price_mock" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/paymment_card_data_margin"
-            android:text="@string/paymment_card_date_title"
-            android:textSize="@dimen/paymment_card_data_title_size" />
+            android:layout_marginTop="@dimen/payment_card_data_margin"
+            android:text="@string/payment_card_date_title"
+            android:textSize="@dimen/payment_card_data_title_size" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:layout_marginBottom="@dimen/paymment_card_data_margin"
+            android:layout_marginBottom="@dimen/payment_card_data_margin"
             android:background="@android:color/black" />
 
         <TextView
@@ -74,8 +74,8 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/paymment_edt_card_fragment_1"
-                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:id="@+id/payment_edt_card_fragment_1"
+                android:layout_width="@dimen/payment_edt_card_default_size"
                 android:layout_height="wrap_content"
                 android:digits="0987654321"
                 android:inputType="number"
@@ -84,12 +84,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/paymment_separator_margin"
-                android:text="@string/paymment_separator" />
+                android:layout_margin="@dimen/payment_separator_margin"
+                android:text="@string/payment_separator" />
 
             <EditText
-                android:id="@+id/paymment_edt_card_fragment_2"
-                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:id="@+id/payment_edt_card_fragment_2"
+                android:layout_width="@dimen/payment_edt_card_default_size"
                 android:layout_height="wrap_content"
                 android:digits="0987654321"
                 android:inputType="number"
@@ -98,12 +98,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/paymment_separator_margin"
-                android:text="@string/paymment_separator" />
+                android:layout_margin="@dimen/payment_separator_margin"
+                android:text="@string/payment_separator" />
 
             <EditText
-                android:id="@+id/paymment_edt_card_fragment_3"
-                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:id="@+id/payment_edt_card_fragment_3"
+                android:layout_width="@dimen/payment_edt_card_default_size"
                 android:layout_height="wrap_content"
                 android:digits="0987654321"
                 android:inputType="number"
@@ -112,12 +112,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/paymment_separator_margin"
-                android:text="@string/paymment_separator" />
+                android:layout_margin="@dimen/payment_separator_margin"
+                android:text="@string/payment_separator" />
 
             <EditText
-                android:id="@+id/paymment_edt_card_fragment_4"
-                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:id="@+id/payment_edt_card_fragment_4"
+                android:layout_width="@dimen/payment_edt_card_default_size"
                 android:layout_height="wrap_content"
                 android:digits="0987654321"
                 android:inputType="number"
@@ -128,8 +128,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/paymment_csv_margin"
-            android:layout_marginTop="@dimen/paymment_csv_margin">
+            android:layout_marginBottom="@dimen/payment_csv_margin"
+            android:layout_marginTop="@dimen/payment_csv_margin">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -137,8 +137,8 @@
                 android:text="Código de segurança: " />
 
             <EditText
-                android:id="@+id/paymment_edt_secury_code"
-                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:id="@+id/payment_edt_secury_code"
+                android:layout_width="@dimen/payment_edt_card_default_size"
                 android:layout_height="wrap_content"
                 android:digits="0987654321"
                 android:inputType="number" />
@@ -155,35 +155,35 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/paymment_radio_visa"
+                android:id="@+id/payment_radio_visa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="cardFlagClick"
-                android:text="VISA" />
+                android:text="@string/payment_card_flag_visa" />
 
             <RadioButton
-                android:id="@+id/paymment_radio_master"
+                android:id="@+id/payment_radio_master"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="cardFlagClick"
-                android:text="MASTERCARD" />
+                android:text="@string/payment_card_flag_mastercard" />
 
             <RadioButton
-                android:id="@+id/paymment_radio_amex"
+                android:id="@+id/payment_radio_amex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="cardFlagClick"
-                android:text="AMEX" />
+                android:text="@string/payment_card_flag_amex" />
         </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/paymment_name_card" />
+            android:text="@string/payment_name_card" />
 
         <EditText
-            android:id="@+id/paymment_name_card"
+            android:id="@+id/payment_name_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp" />
@@ -196,10 +196,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/paymment_dt_card" />
+                android:text="@string/payment_dt_card" />
 
             <EditText
-                android:id="@+id/paymment_card_month"
+                android:id="@+id/payment_card_month"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:digits="0987654321"
@@ -213,7 +213,7 @@
                 android:text="/" />
 
             <EditText
-                android:id="@+id/paymment_card_year"
+                android:id="@+id/payment_card_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:digits="0987654321"
@@ -223,7 +223,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/paymment_btn_buy"
+            android:id="@+id/payment_btn_buy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Finalizar compra." />

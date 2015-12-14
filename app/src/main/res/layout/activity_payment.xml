@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.dmp.ui.PaymmentActivity">
+    tools:context="com.dmp.ui.PaymentActivity">
 
 
     <android.support.v7.widget.Toolbar
@@ -16,6 +16,6 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <include layout="@layout/content_paymment" />
+    <include layout="@layout/content_payment" />
 
 </LinearLayout>

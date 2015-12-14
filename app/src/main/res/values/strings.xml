@@ -8,13 +8,17 @@
     <string name="error_msg">Verifique sua conexão e tente novamente.</string>
     <string name="adapter_home_mock_price">R$ XX,XX</string>
     <string name="home_snack_msg">## foi adicionado ao carrinho.</string>
-    <string name="title_activity_paymment">PaymmentActivity</string>
-    <string name="paymment_total_products">Total de produtos :</string>
-    <string name="paymment_total_qtd_mock">XXXXX</string>
-    <string name="paymment_total_price">Valor total:</string>
-    <string name="paymment_total_price_mock">XXXXX</string>
-    <string name="paymment_separator">-</string>
-    <string name="paymment_card_date_title">DADOS DO CARTÃO</string>
-    <string name="paymment_name_card">Nome no cartão</string>
-    <string name="paymment_dt_card">Data de vencimento</string>
+    <string name="title_activity_payment">PaymentActivity</string>
+    <string name="payment_total_products">Total de produtos :</string>
+    <string name="payment_total_qtd_mock">XXXXX</string>
+    <string name="payment_total_price">Valor total:</string>
+    <string name="payment_total_price_mock">XXXXX</string>
+    <string name="payment_separator">-</string>
+    <string name="payment_card_date_title">DADOS DO CARTÃO</string>
+    <string name="payment_name_card">Nome no cartão</string>
+    <string name="payment_dt_card">Data de vencimento</string>
+    <string name="payment_card_flag_amex">AMEX</string>
+    <string name="payment_card_flag_mastercard">MASTERCARD</string>
+    <string name="payment_card_flag_visa">VISA</string>
+    <string name="payment_error_msg_validator">Verifique todos os dados.</string>
 </resources>
