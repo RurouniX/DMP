@@ -1,6 +1,6 @@
 package com.dmp.application;
 
-import com.dmp.application.api.ApiService;
+import com.dmp.api.ApiService;
 
 import de.greenrobot.event.EventBus;
 

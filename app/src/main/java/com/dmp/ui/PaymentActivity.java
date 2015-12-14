@@ -2,7 +2,6 @@ package com.dmp.ui;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.dmp.R;
 import com.dmp.bus.RequestPaymentBus;
@@ -42,6 +40,9 @@ public class PaymentActivity extends AppCompatActivity {
     View.OnClickListener mPayListener;
     Context mContext;
     EventBus mBus = EventBus.getDefault();
+    Snackbar snackLoading;
+    Snackbar snackSuccess;
+    Snackbar snackError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,16 +77,23 @@ public class PaymentActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (hasAllData()) {
+                    showLoadingSnackbar();
                     RequestPaymentBus requestPaymentBus = new RequestPaymentBus();
                     requestPaymentBus.payment = getPaymennt();
+                    requestPaymentBus.context = mContext;
                     mBus.post(requestPaymentBus);
-                }else{
-                    Snackbar.make(v, R.string.payment_error_msg_validator,Snackbar.LENGTH_SHORT).show();
+                } else {
+                    Snackbar.make(v, R.string.payment_error_msg_validator, Snackbar.LENGTH_SHORT).show();
                 }
 
 
             }
         };
+    }
+
+    private void showLoadingSnackbar() {
+        snackLoading.show();
+
     }
 
     private Payment getPaymennt() {
@@ -120,6 +128,9 @@ public class PaymentActivity extends AppCompatActivity {
         mEdtName = (EditText) findViewById(R.id.payment_name_card);
         mEdtCardYear = (EditText) findViewById(R.id.payment_card_year);
         mBtnPay = (Button) findViewById(R.id.payment_btn_buy);
+        snackLoading = Snackbar.make(mBtnPay, R.string.payment_snack_loading, Snackbar.LENGTH_INDEFINITE);
+        snackSuccess = Snackbar.make(mBtnPay, R.string.payment_snack_success, Snackbar.LENGTH_SHORT);
+        snackError = Snackbar.make(mBtnPay, R.string.payment_snack_error, Snackbar.LENGTH_SHORT);
 
         mTvTotalItens.setText(String.valueOf(mProducts.size()));
         mTvTotalPrice.setText(String.valueOf(mPay.price));
@@ -155,6 +166,14 @@ public class PaymentActivity extends AppCompatActivity {
 
     //Events
     public void onEvent(ResponsePaymentBus responsePaymentBus) {
+        snackLoading.dismiss();
+        snackSuccess.show();
+        snackSuccess.setCallback(new Snackbar.Callback() {
+            @Override
+            public void onDismissed(Snackbar snackbar, int event) {
+                finish();
+            }
+        });
 
     }
 }

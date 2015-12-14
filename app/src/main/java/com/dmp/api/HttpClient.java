@@ -1,10 +1,14 @@
-package com.dmp.application.api;
+package com.dmp.api;
 
 import android.content.Context;
 
+import com.dmp.bus.ResponseErrorPaymentBus;
 import com.dmp.bus.ResponseErrorProductBus;
+import com.dmp.bus.ResponsePaymentBus;
 import com.dmp.bus.ResponseProductsBus;
+import com.dmp.model.Payment;
 import com.dmp.model.Product;
+import com.dmp.model.ResponsePayment;
 
 import java.util.List;
 
@@ -68,6 +72,28 @@ public class HttpClient {
             }
         });
 
+    }
+
+    public void requestPayment(Payment payment) {
+        Call<ResponsePayment> responsePaymentCall = api.makePayment(payment);
+        responsePaymentCall.enqueue(new Callback<ResponsePayment>() {
+            @Override
+            public void onResponse(Response<ResponsePayment> response, Retrofit retrofit) {
+
+                if (response.isSuccess()) {
+                    ResponsePaymentBus responsePaymentBus = new ResponsePaymentBus();
+                    responsePaymentBus.response = response.body();
+                    bus.post(responsePaymentBus);
+                } else {
+                    bus.post(new ResponseErrorPaymentBus());
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                bus.post(new ResponseErrorPaymentBus());
+            }
+        });
     }
 
 }

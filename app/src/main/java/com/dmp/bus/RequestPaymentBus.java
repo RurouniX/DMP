@@ -1,5 +1,7 @@
 package com.dmp.bus;
 
+import android.content.Context;
+
 import com.dmp.model.Payment;
 
 /**
@@ -7,4 +9,5 @@ import com.dmp.model.Payment;
  */
 public class RequestPaymentBus {
     public Payment payment;
+    public Context context;
 }

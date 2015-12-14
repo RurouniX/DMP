@@ -21,4 +21,7 @@
     <string name="payment_card_flag_mastercard">MASTERCARD</string>
     <string name="payment_card_flag_visa">VISA</string>
     <string name="payment_error_msg_validator">Verifique todos os dados.</string>
+    <string name="payment_snack_loading">Efetuando compra, aguarde por favor...</string>
+    <string name="payment_snack_success">Compra efetuada com sucesso !</string>
+    <string name="payment_snack_error">Houve algum problema tente novamente mais tarde.</string>
 </resources>
