@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.dmp.R;
 import com.dmp.bus.RequestPaymentBus;
+import com.dmp.bus.ResponseErrorPaymentBus;
 import com.dmp.bus.ResponsePaymentBus;
 import com.dmp.model.Payment;
 import com.dmp.model.Product;
@@ -174,6 +175,10 @@ public class PaymentActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
+    public void onEvent(ResponseErrorPaymentBus responseErrorPaymentBus) {
+        snackLoading.dismiss();
+        snackError.show();
     }
 }
