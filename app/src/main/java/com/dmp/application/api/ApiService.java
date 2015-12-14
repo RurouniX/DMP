@@ -2,7 +2,7 @@ package com.dmp.application.api;
 
 import android.widget.Toast;
 
-import com.dmp.bus.TstBus;
+import com.dmp.bus.RequestProductsBus;
 
 /**
  * Created by X-Dream on 13/12/15.
@@ -10,8 +10,10 @@ import com.dmp.bus.TstBus;
 public class ApiService {
 
 
-    public void onEvent(TstBus bus){
-        Toast.makeText(bus.context, "Paçoca é 1 real", Toast.LENGTH_SHORT).show();
+    public void onEvent(RequestProductsBus bus){
+
+        HttpClient.getInstance(bus.context).requestProducts();
+
     }
 
 }

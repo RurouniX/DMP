@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/error_icon_size"
+        android:layout_height="@dimen/error_icon_size"
+        android:layout_above="@+id/error_msg"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_dialog_alert" />
+
+    <TextView
+        android:id="@+id/error_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/error_msg_margin"
+        android:gravity="center"
+        android:text="@string/error_msg" />
+
+    <Button
+        android:id="@+id/error_btn_try_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_msg"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="@dimen/error_btn_padding"
+        android:paddingRight="@dimen/error_btn_padding"
+        android:text="Tentar novamente." />
+</RelativeLayout>

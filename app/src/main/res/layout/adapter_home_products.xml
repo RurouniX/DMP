@@ -1,14 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
 
-
-    <TextView
-        android:id="@+id/txtst"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Qualquer texto grande o suficiente estará aqui" />
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
 
-</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/adapter_home_products_thumb"
+                android:layout_width="@dimen/adapter_home_thumb_size"
+                android:layout_height="@dimen/adapter_home_thumb_size"
+                android:layout_margin="@dimen/adapter_home_thumb_margin"
+                tools:src="@drawable/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/adapter_home_products_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/adapter_home_name_margin"
+                    android:textSize="@dimen/adapter_home_name_size"
+                    tools:text="@string/adapter_home_products_mock_product_name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/adapter_home_price_margin"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/adapter_home_products_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/adapter_home_price_size"
+                        tools:text="@string/adapter_home_mock_price" />
+
+                    <Button
+                        android:id="@+id/adapter_home_buy"
+                        android:layout_width="@dimen/adapter_home_buy_btn_size"
+                        android:layout_height="@dimen/adapter_home_buy_btn_size"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/ic_add_shopping_cart_black_24dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

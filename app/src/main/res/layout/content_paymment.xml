@@ -1,16 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_paymment"
-    tools:context="com.dmp.ui.PaymmentActivity">
+    tools:context="com.dmp.ui.PaymmentActivity"
+    tools:showIn="@layout/activity_paymment">
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paymment_total_products" />
+
+            <TextView
+                android:id="@+id/paymment_total_qtd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/paymment_total_qtd_mock" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paymment_total_price" />
+
+            <TextView
+                android:id="@+id/paymment_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/paymment_total_price_mock" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/paymment_card_data_margin"
+            android:text="@string/paymment_card_date_title"
+            android:textSize="@dimen/paymment_card_data_title_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="@dimen/paymment_card_data_margin"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número do cartão" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/paymment_edt_card_fragment_1"
+                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:layout_height="wrap_content"
+                android:digits="0987654321"
+                android:inputType="number"
+                android:maxLength="4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/paymment_separator_margin"
+                android:text="@string/paymment_separator" />
+
+            <EditText
+                android:id="@+id/paymment_edt_card_fragment_2"
+                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:layout_height="wrap_content"
+                android:digits="0987654321"
+                android:inputType="number"
+                android:maxLength="4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/paymment_separator_margin"
+                android:text="@string/paymment_separator" />
+
+            <EditText
+                android:id="@+id/paymment_edt_card_fragment_3"
+                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:layout_height="wrap_content"
+                android:digits="0987654321"
+                android:inputType="number"
+                android:maxLength="4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/paymment_separator_margin"
+                android:text="@string/paymment_separator" />
+
+            <EditText
+                android:id="@+id/paymment_edt_card_fragment_4"
+                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:layout_height="wrap_content"
+                android:digits="0987654321"
+                android:inputType="number"
+                android:maxLength="4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/paymment_csv_margin"
+            android:layout_marginTop="@dimen/paymment_csv_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Código de segurança: " />
+
+            <EditText
+                android:id="@+id/paymment_edt_secury_code"
+                android:layout_width="@dimen/paymment_edt_card_default_size"
+                android:layout_height="wrap_content"
+                android:digits="0987654321"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecione a bandeira" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/paymment_radio_visa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cardFlagClick"
+                android:text="VISA" />
+
+            <RadioButton
+                android:id="@+id/paymment_radio_master"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cardFlagClick"
+                android:text="MASTERCARD" />
+
+            <RadioButton
+                android:id="@+id/paymment_radio_amex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cardFlagClick"
+                android:text="AMEX" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/paymment_name_card" />
+
+        <EditText
+            android:id="@+id/paymment_name_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paymment_dt_card" />
+
+            <EditText
+                android:id="@+id/paymment_card_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0987654321"
+                android:hint="MM"
+                android:inputType="number"
+                android:maxLength="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/" />
+
+            <EditText
+                android:id="@+id/paymment_card_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0987654321"
+                android:hint="AA"
+                android:inputType="number"
+                android:maxLength="2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/paymment_btn_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finalizar compra." />
+    </LinearLayout>
+</ScrollView>
