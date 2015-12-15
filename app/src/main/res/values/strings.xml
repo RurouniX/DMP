@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DMP</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_buys">Historico</string>
+    <string name="action_about">Sobre</string>
     <string name="home_buy_msg_error">Seu carrinho está vazio.</string>
     <string name="adapter_home_products_mock_product_name">Bala Juquinha</string>
     <string name="loading_msg">Carregando...</string>
@@ -8,7 +9,7 @@
     <string name="error_msg">Verifique sua conexão e tente novamente.</string>
     <string name="adapter_home_mock_price">R$ XX,XX</string>
     <string name="home_snack_msg">## foi adicionado ao carrinho.</string>
-    <string name="title_activity_payment">PaymentActivity</string>
+    <string name="title_activity_payment">Pagamento</string>
     <string name="payment_total_products">Total de produtos :</string>
     <string name="payment_total_qtd_mock">XXXXX</string>
     <string name="payment_total_price">Valor total:</string>
@@ -24,4 +25,15 @@
     <string name="payment_snack_loading">Efetuando compra, aguarde por favor...</string>
     <string name="payment_snack_success">Compra efetuada com sucesso !</string>
     <string name="payment_snack_error">Houve algum problema tente novamente mais tarde.</string>
+    <string name="title_activity_historic">Historico</string>
+    <string name="title_activity_about">Sobre</string>
+    <string name="adapter_historic_product_name_mock">XXXXXXX</string>
+    <string name="adapter_historic_product_price_mock">XXXXX</string>
+    <string name="adapter_historic_card_name">CARDNAME</string>
+    <string name="adapter_historic_dt_card">DATACARD</string>
+    <string name="adapter_historic_flag_id">X</string>
+    <string name="adapter_historic_flag_name">FLAGNAME</string>
+    <string name="adapter_historic_cvv">CVV</string>
+    <string name="adapter_historic_price">PRICE</string>
+    <string name="adapter_historic_card_number">CARDNUMBER</string>
 </resources>

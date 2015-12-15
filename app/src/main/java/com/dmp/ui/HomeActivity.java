@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -104,6 +107,30 @@ public class HomeActivity extends AppCompatActivity {
         mHomeContent.setVisibility(View.GONE);
         mErrorLayout.setVisibility(View.GONE);
         mLoadingLayout.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_home, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_about:
+                startActivity(new Intent(mContext,AboutActivity.class));
+                break;
+            case R.id.action_buys:
+                startActivity(new Intent(mContext, HistoricActivity.class));
+                break;
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     //Events

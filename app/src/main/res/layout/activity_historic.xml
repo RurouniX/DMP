@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.dmp.ui.HistoricActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_toolbar" />
+
+
+    <ViewSwitcher
+        android:id="@+id/historic_view_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/historic_change_historic"
+        android:layout_below="@id/toolbar"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/historic_list_products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/adapter_historic_products" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/historic_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/adapter_historic_payment" />
+
+    </ViewSwitcher>
+
+    <Button
+        android:id="@+id/historic_change_historic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Outras informações" />
+
+</RelativeLayout>

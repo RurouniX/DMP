@@ -13,6 +13,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.dmp.R;
+import com.dmp.bus.DAOSavePaymentBus;
+import com.dmp.bus.DAOSaveProductsBus;
 import com.dmp.bus.RequestPaymentBus;
 import com.dmp.bus.ResponseErrorPaymentBus;
 import com.dmp.bus.ResponsePaymentBus;
@@ -169,6 +171,12 @@ public class PaymentActivity extends AppCompatActivity {
     public void onEvent(ResponsePaymentBus responsePaymentBus) {
         snackLoading.dismiss();
         snackSuccess.show();
+        DAOSaveProductsBus daoSaveProductsBus = new DAOSaveProductsBus();
+        daoSaveProductsBus.products = mProducts;
+        mBus.post(daoSaveProductsBus);
+        DAOSavePaymentBus daoSavePaymentBus = new DAOSavePaymentBus();
+        daoSavePaymentBus.payment = mPay;
+        mBus.post(daoSavePaymentBus);
         snackSuccess.setCallback(new Snackbar.Callback() {
             @Override
             public void onDismissed(Snackbar snackbar, int event) {

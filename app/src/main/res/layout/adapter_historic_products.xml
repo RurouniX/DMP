@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/adapter_historic_dimen"
+    android:paddingTop="@dimen/adapter_historic_dimen"
+    android:paddingBottom="@dimen/adapter_historic_dimen"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/adapter_historic_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="@string/adapter_historic_product_name_mock" />
+
+        <TextView
+            android:id="@+id/adapter_historic_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            tools:text="@string/adapter_historic_product_price_mock" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

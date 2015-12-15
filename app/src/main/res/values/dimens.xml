@@ -20,4 +20,6 @@
     <dimen name="payment_card_data_margin">26dp</dimen>
     <dimen name="payment_card_data_title_size">20sp</dimen>
     <dimen name="payment_csv_margin">20dp</dimen>
+    <dimen name="adapter_historic_layout_dimen">15dp</dimen>
+    <dimen name="adapter_historic_dimen">10dp</dimen>
 </resources>
